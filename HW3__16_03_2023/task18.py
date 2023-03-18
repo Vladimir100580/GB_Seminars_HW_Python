@@ -2,13 +2,17 @@
 # Пользователь в первой строке вводит натуральное число N – количество элементов в массиве.
 # В последующих  строках записаны N целых чисел Ai. Последняя строка содержит число X
 
-quantity = int(input('Введите общее число монеток (большее 1): '))
-reshk = -1
-while not(0 < reshk < quantity):
-    reshk = int(input(f'Введите количество тех монеток, что лежат решкой вверх 1 - {quantity-1}: '))
-if 2 * reshk < quantity:
-    print(reshk)
-else:
-    print(quantity-reshk)
+from random import randint
+
+quant = int(input('Введите количество элементов в массиве: '))
+arr = [randint(1, 20) for _ in range(quant)]
+print(arr)
+number = int(float(input('Введите чиcло X: ')))
+dx_max = 20
+for i in arr:    # Здесь, как раз-таки, банальной пробежкой
+    if abs(i - number) < dx_max:
+        dx_max = abs(i - number)
+        numbs = i
+print(f'Самый близкий по величине элемент - {numbs}')
 
 
