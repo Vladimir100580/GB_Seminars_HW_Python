@@ -4,6 +4,10 @@
 e = 'YРВАФ'
 print("A" in e)
 
+print(min('27', '3'))
+
+print('5667'.split("X"))
+
 # number = int(input("Введите число"))
 # s = 1
 # while number > 1:
