@@ -5,22 +5,27 @@
 f = lambda x: x+2
 print(f(4))
 
+lis = [2, 3, 5, 10, 7]
+
+print(5 % 5)
+print(lis[(5 % 5)])
+
 # data = [1,2,3,4]
 # f_data = [y for x in data if (y := f(x)) is not 4]
 # print(f_data)
 
 
 # Пример нахождения суммы квадратов
-list = [2, 4, 6, 7]
-s = 0
-[s := s + m ** 2 for m in list]
-print(s)
-print()
+# list = [2, 4, 6, 7]
+# s = 0
+# [s := s + m ** 2 for m in list]
+# print(s)
+# print()
 
 
-s = [0, 1]
-[s := s + [s[i-1] + s[i-2]] for i in range(2, 20)]
-print(s)
+# s = [0, 1]
+# [s := s + [s[i-1] + s[i-2]] for i in range(2, 20)]
+# print(s)
 
 
 # e = 'YРВАФ'
