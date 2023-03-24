@@ -10,6 +10,24 @@
 
 from random import randint
 
+
+my_dict = {"АВЕИНОРСТ": 1,
+           "ДКЛМПУ": 2,
+           "БГЁЬЯ": 3,
+           "ЙЫ": 4,
+           "ЖЗХЦЧ": 5,
+           "ШЭЮ": 8,
+           "ФЩЪ": 10
+           }
+tx = input("Введите слово: ").upper()
+
+for letter in tx:
+    for key, value in my_dict.items():
+        print(key, value)
+
+# for letter in tx:
+
+
 days = int(input("Введите количество дней: "))
 lengh = 0
 tToday = 0
