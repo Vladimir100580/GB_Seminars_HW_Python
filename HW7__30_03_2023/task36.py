@@ -5,6 +5,11 @@
 # Примечание: бинарной операцией называется любая операция, у которой ровно два аргумента,
 # как, например, у операции умножения.
 
-from random import randint
 
+def print_operation_table(operation, num_rows=6, num_columns=6):
+    for n in range(1, num_rows + 1):
+        for m in range(1, num_columns + 1):
+            print(operation(n, m), end='  ')
+        print()
 
+print_operation_table(lambda x, y: x * y)
