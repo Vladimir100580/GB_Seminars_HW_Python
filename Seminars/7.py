@@ -6,6 +6,11 @@
 import random
 import string
 
+
+print('абвгдежзи'[:-1])
+print(' .. впрежь  '.strip())
+
+
 text = 'dfdgd fhfghf    erytr dfgdg dg   gdd'
 list1 = text.lower().split()
 

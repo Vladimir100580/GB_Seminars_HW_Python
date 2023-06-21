@@ -29,3 +29,13 @@ for i in arr2:
     if i not in arr3:
         arr3.append(i)
 print(arr3)
+
+print("\nморж\n")
+list = [2, 4, 6, 7]
+s = 0
+[s := s + m ** 2 for m in list]
+print("Сумма квадратов" + str(s))
+
+s = [0, 1]
+[s := s + [s[i-2] + s[i-1]] for i in range(2, 20)]
+print(s)
