@@ -41,8 +41,7 @@ def Iter_Fib(n):
 
 
 def Fib_rec(numb1):
-    if numb1 == 1: return 0
-    if numb1 == 2: return 1
+    if numb1 == 1 or numb1 == 2: return (numb1 - 1)
     return Fib_rec(numb1 - 1) + Fib_rec(numb1 - 2)
 
 
