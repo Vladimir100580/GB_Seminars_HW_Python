@@ -3,10 +3,11 @@ from random import randint
 from Sorts.Puzyrek import Puzyr
 from Sorts.Pyramid_Sort import SortPyr
 from Sorts.Quick_Sort import SortQ
+from Sorts.Сount_Sort import counting_sort
 
-mas =[randint(0, 100) for i in range(20)]
+mas =[randint(-100, 100) for i in range(20)]
 print(f'Исходный массив : {mas}')
-print(f'После сортировки: {SortPyr(mas)}')
+print(f'После сортировки: {counting_sort(mas)}')
 
 # print(f'{mas=}')
 # Сортировка пузырьком
@@ -23,7 +24,7 @@ print(f'После сортировки: {SortPyr(mas)}')
 
 
 # Быстрая сортировка
-# n = 100 # количество прогонов
+# n = 20 # количество прогонов
 # sum_time = 0
 # for p in range(n):
 #     mas = [randint(0, 10 ** 7) for i in range(10 ** 6)]    # при изменении 10**4 на 10**5, время увеличивается в 10, и в 5/4 раза, свойства логарифма.
@@ -49,13 +50,28 @@ print(f'После сортировки: {SortPyr(mas)}')
 
 
 # Пирамидальная сортировка
-n = 3 # количество прогонов
+# n = 20 # количество прогонов
+# sum_time = 0
+# for p in range(n):
+#     mas = [randint(0, 10 ** 7) for i in range(10 ** 6)]
+#     start4 = time.time()
+#     SortPyr(mas)
+#     end4 = time.time()
+#     sum_time += end4 - start4
+#     print(f'Замер №{p+1}: {end4 - start4}')
+# print(f'Быстрая сортировка: {sum_time/n}')
+
+
+# Алгоритм: Сортировка подсчетом (Заимствовано у Ильи)
+n = 20 # количество прогонов
 sum_time = 0
 for p in range(n):
     mas = [randint(0, 10 ** 7) for i in range(10 ** 6)]
-    start4 = time.time()
-    SortPyr(mas)
-    end4 = time.time()
-    sum_time += end4 - start4
-    print(f'Замер №{p+1}: {end4 - start4}')
-print(f'Быстрая сортировка: {sum_time/n}')
+    start5 = time.time()
+    counting_sort(mas)
+    end5 = time.time()
+    sum_time += end5 - start5
+    print(f'Замер №{p+1}: {end5 - start5}')
+print(f'Cортировка подсчетом: {sum_time/n}')
+
+
